@@ -1,0 +1,2 @@
+# Ignore data, force users to unzip compressed data
+*.csv
