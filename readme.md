@@ -4,35 +4,56 @@ Predicting the NCAA basketball tournament games using Machine Learning for Kaggl
 
 ## Getting Started
 
-Extract the .zip files in data/zippedFiles to data.
-
-Clone the repository and run `python3 mm.py`.
+You can run the ipython script in a jupyter notebook locally or you can run it in [my kernel](https://www.kaggle.com/kdorosh/basic-starter-kernel-ncaa-men-s-dataset) on Kaggle's cloud resources.
 
 ### Prerequisites
 
-Install python3
+Install [Docker](https://store.docker.com/search?type=edition&offering=community) or [Docker Toolbox](https://docs.docker.com/toolbox/overview/#ready-to-get-started)
 
-### Installing Python
-
-Linux:
+Once done, create a new docker machine with more processing power, disk memory, and RAM than the default machine (or as much as you can afford):
 
 ```
-sudo apt-get update
-sudo apt-get install python3.6
+$ docker-machine create -d virtualbox --virtualbox-disk-size "50000" --virtualbox-cpu-count "4" --virtualbox-memory "8092" docker2
 ```
 
-MacOS: (install Homebrew and then python)
+Now pull the docker image with all the python, ipython, and jupyter dependencies my notebook requires. We will run the notebook in this docker container.
+
+This image is large, ~15GB, and will take a while to download/extract. Go grab a snack :)
+
 ```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install python3
+$ docker pull kaggle/python
 ```
 
-Windows: (from cmd.exe, install Chocolatey and then python)
+### Running the Program
+
+Start your larger, more powerful, docker container.
+
 ```
-@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-choco install python
+$ docker-machine start docker2
+$ eval $(docker-machine env docker2)
 ```
 
+Run the Jupyter notebook.
+
+If you are running Windows, you must run `start.sh` from within the docker quickstart terminal.
+
+```
+sh start.sh
+```
+
+This will open a locally hosted jupyter notebook in your web browser. Upload the March Madness notebook, located at `nbs/script.ipynb`.
+
+Run the notebook.
+
+Once done, download any results you wish to keep.
+
+CTR-C (twice) in the terminal where you started the jupyter notebook server kills the server.
+
+To kill the docker machine when you are all set.
+
+```
+$ docker-machine stop docker2
+```
 
 ## Running the tests
 
@@ -41,12 +62,7 @@ No tests to speak of yet..
 ## Built With
 
 * [Scikit-learn](http://scikit-learn.org/stable/) - Python Machine Learning library
-* [Kaggle](https://www.kaggle.com/juliaelliott/basic-starter-kernel-ncaa-men-s-dataset/data) - NCAA data from 1985-2018, provided by Kaggle
-
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. 
+* [Kaggle](https://www.kaggle.com/juliaelliott/basic-starter-kernel-ncaa-men-s-dataset/data) - NCAA data from 1985-2018, initial basic logistic regression notebook forked from Kaggle
 
 ## Authors
 
