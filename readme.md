@@ -10,6 +10,8 @@ You can run the ipython script in a jupyter notebook locally or you can run it i
 
 Install [Docker](https://store.docker.com/search?type=edition&offering=community) or [Docker Toolbox](https://docs.docker.com/toolbox/overview/#ready-to-get-started)
 
+* Note: If you use Docker Toolbox, you must clone the repo underneath /Users (MacOS) or C:\Users (Windows), or else docker volume mounting WILL NOT WORK.
+
 Once done, create a new docker machine with more processing power, disk memory, and RAM than the default machine (or as much as you can afford):
 
 ```
@@ -41,15 +43,15 @@ If you are running Windows, you must run `start.sh` from within the docker quick
 sh start.sh
 ```
 
-This will open a locally hosted jupyter notebook in your web browser. Upload the March Madness notebook, located at `nbs/script.ipynb`.
+This will open a locally hosted jupyter notebook in your web browser. Open and run the March Madness notebook, located at `nbs/script.ipynb`.
 
-Run the notebook.
+On my machine, running the whole script takes a couple minutes.
 
-Once done, download any results you wish to keep.
+Once done, the script will output predictions in `nbs\logreg_seed_starter.csv`.
 
 CTR-C (twice) in the terminal where you started the jupyter notebook server kills the server.
 
-To kill the docker machine when you are all set.
+Kill the docker machine when you are all done:
 
 ```
 $ docker-machine stop docker2
