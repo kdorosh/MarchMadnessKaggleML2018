@@ -1,2 +1,5 @@
-# Ignore data, force users to unzip compressed data
-*.csv
+# Ignore MacOS folder settings files
+.DS_Store
+
+# Ignore data (too large); force users to unzip compressed data
+.csv

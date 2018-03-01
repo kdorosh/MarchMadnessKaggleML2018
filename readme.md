@@ -26,6 +26,14 @@ This image is large, ~15GB, and will take a while to download/extract. Go grab a
 $ docker pull kaggle/python
 ```
 
+### Setting up the Data
+
+Extract the following datasets:
+
+* `input\DataFiles.zip` to `input\DataFiles`
+* `input\MasseyOrdinals.zip` to `input\MasseyOrdinals`
+* `input\PlayByPlay_2017.zip` to `input\PlayByPlay_2017`
+
 ### Running the Program
 
 Start your larger, more powerful, docker container.
