@@ -40,7 +40,6 @@ Start your larger, more powerful, docker container.
 
 ```
 $ docker-machine start docker2
-$ eval $(docker-machine env docker2)
 ```
 
 Run the Jupyter notebook.
