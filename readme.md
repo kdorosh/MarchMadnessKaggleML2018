@@ -51,11 +51,11 @@ If you are running Windows, you must run `start.sh` from within the docker quick
 sh start.sh
 ```
 
-This will open a locally hosted jupyter notebook in your web browser. Open and run the March Madness notebook, located at `nbs/script.ipynb`.
+This will open a locally hosted jupyter notebook in your web browser. Open the March Madness notebook, located at `nbs/script.ipynb`. Put the kernel in a "trusted" state and run it.
 
 On my machine, running the whole script takes a couple minutes.
 
-Once done, the script will output predictions in `nbs\logreg_seed_starter.csv`.
+Once done, the script will output predictions in `nbs\predictions.csv`.
 
 CTR-C (twice) in the terminal where you started the jupyter notebook server kills the server.
 

@@ -56,7 +56,7 @@ fi
 
 # kpython
 # ikpython
- kjupyter
+kjupyter
 
 # For Debugging
 # Gives you a root terminal within the docker image
