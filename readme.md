@@ -31,8 +31,7 @@ $ docker pull kaggle/python
 Extract the following datasets:
 
 * `input\DataFiles.zip` to `input\DataFiles`
-* `input\MasseyOrdinals.zip` to `input\MasseyOrdinals`
-* `input\PlayByPlay_2017.zip` to `input\PlayByPlay_2017`
+* `input\PrelimData2018.zip` to `input\PrelimData2018`
 
 ### Running the Program
 
