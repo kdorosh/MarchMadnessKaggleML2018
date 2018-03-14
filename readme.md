@@ -32,8 +32,10 @@ $ docker pull kaggle/python
 
 Extract the following datasets:
 
-* `input\DataFiles.zip` to `input\DataFiles`
-* `input\Stage2UpdatedDataFiles.zip` to `input\Stage2UpdatedDataFiles`
+* `input\ZippedData\DataFiles.zip` to `input\`, and then extract
+* `input\ZippedData\Stage2UpdatedDataFiles.zip` to `input\`
+
+You will need to overwrite files of the same name when you extract the second dataset.
 
 ### Running the Program
 
