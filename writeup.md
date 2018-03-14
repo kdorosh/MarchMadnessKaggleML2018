@@ -95,3 +95,5 @@ For example, I expect my model will undervalue Missouri this year since Michael 
 I would implement more of the above features if I had more time, but even this would only give incremental gains. Luck is still the most important factor; the best data scientists in the world achieve ~70%. March Madness is no exact science. And that's what makes it fun.
 
 ## The Final Bracket
+
+![Final Bracket png](output.png)
