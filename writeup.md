@@ -47,7 +47,7 @@ And Season Average Statistics for:
 
 To evaluate each matchup, my feature vector was the *difference* between each team's set of features. This is beneficial because it highlights/exaggerates discrepancies between teams in a given matchup.
 
-Admittedly, the Win Margin metric is slightly redundent (especially in the nerual network model), but it still helped improve the performance of some algorithms tested. 
+Admittedly, the Win Margin metric is slightly redundent (especially in the neural network model), but it still helped improve the performance of some algorithms tested. 
 
 ## Evaluating my Model
 
@@ -80,7 +80,7 @@ The previous 4 winners of the Kaggle tournament:
 
 ## Flaws with my Model
 
-It makes decisions based solely on the features I provide it! Important things the model will overlook include
+My model makes decisions based solely on the features I provide it! Just some of the important things it will overlook..
 
 * Injuries
 * Player Experience/Age
