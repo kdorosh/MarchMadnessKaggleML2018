@@ -53,7 +53,7 @@ Admittedly, the Win Margin metric is slightly redundent (especially in the nerua
 
 To evaluate the success of my model, I worked to minimize the negative *log loss* of my classifier. The formula:
 
-![LogLossFunctionPNG](KaggleLogLossFunction.png)
+![LogLossFunctionPNG](KaggleLogLossFormula.png)
 
 I have linked [an explanation](https://rstudio-pubs-static.s3.amazonaws.com/157427_74913a13c3254d128bc69937434fbfa8.html) for those curious.
 
