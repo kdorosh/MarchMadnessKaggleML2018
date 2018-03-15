@@ -33,9 +33,10 @@ The algorithm that outputs a prediction is called a *classifier*. The algorithms
 
 ## Features Chosen
 
-I chose the following features because I believed that they would correlate most strongly with a team's success. I omitted information like home-court advantage because the March Madness games are supposed to be played at neutral sites. Given more time, I would have included data for ELO scores and Win Shares per 48 minutes (at the team/season level).
+I chose the following features because I believed that they would correlate most strongly with a team's success. I omitted information like home-court advantage because the March Madness games are supposed to be played at neutral sites. Given more time, I would have included data for ELO scores, Conference Strength, and Win Shares per 48 minutes (at the team/season level).
 
 * NCAA March Madness Seed
+* Wins
 
 And Season Average Statistics for:
 
@@ -61,22 +62,21 @@ All you really need to know is that the confidence my model outputs in each matc
 
 ## Models Tested
 
-* Logistic Regression
-* Support Vector Machine (SVM)
-* Neural Networks
-* Gradient Boosted Regression Trees
-* K-Nearest Neighbors (KNN)
-* Random Forest
-
-More results data to come..
-
-My Negative Log Loss is ~-0.5.
+Model tested and log loss 
+* Multi Layer Perceptron Classifier (neural network): -0.55286
+* Gradient Boosting Classifier: -0.55105
+* Random Forest Classifier: -0.57830
+* K-Nearest Neighbors Classifier: -0.55318
+* Support Vector Classification: -0.54425
+* Logistic Regression: -0.54386
 
 The previous 4 winners of the Kaggle tournament:
-* 2017 0.438575 
-* 2016 0.481309 
-* 2015 0.43893 
-* 2014 0.52951
+* 2017 -0.438575 
+* 2016 -0.481309 
+* 2015 -0.43893 
+* 2014 -0.52951
+
+Going up against the pros aint easy, huh?
 
 ## Flaws with my Model
 
@@ -88,13 +88,21 @@ My model makes decisions based solely on the features I provide it! Just some of
 * Depth of Each Team
 * Whether a Team is Hot
 * Strength of Schedule
-* Conference
+* Travel/Effective Home Court Advantage (is the neutral site close enough to home-court that fans travel?)
 
 For example, I expect my model will undervalue Missouri this year since Michael Porter Jr. (a projected top-5 NBA pick) returns from a back injury for the tournament. All of the predictive metrics my classifier uses rely upon data that would be inflated had he played all season.
 
-Further, I find my model slightly undervalues the seed, given that a 16 seed has never beaten a 1 seed (yet it only predicts ~95% of victory for the 1-seed!).
+Further, I find my model undervalues the seed feature, given that a 16 seed has never beaten a 1 seed (yet it only predicts ~90-95% chance of victory for the 1-seed!).
 
-I would implement more of the above features if I had more time, but even this would only give incremental gains. Luck is still the most important factor; the best data scientists in the world achieve ~70%. March Madness is no exact science. And that's what makes it fun.
+I am happy that it recognizes that Kansas vs. Penn is projected to be the closest 1 vs. 16 seed game ever played (Kansas 90.09% chance of winning). Penn is the first 16 seed to have ever cracked an ELO rating of 1700.
+
+I would implement more of the above features if I had more time, but even this would only give incremental gains. Luck is still the most important factor; the best data scientists in the world correctly classify ~70% of the March Madness tournament. March Madness is no exact science. And that's what makes it fun.
+
+## Lessons Learned
+
+Some problems are more apt to being solved with machine learning than others. While March Madness is a fun problem, it is inherently too random to predict reliably.
+
+The inherent unreliability of March Madness makes each step of the machine learning problem vitally important to a good model. The features chosen, algorithm chosen, and the tuning of the hyperparameters are all enormously important. For my model, I believe my input features offer the most room for improvement. Picking statistics that more strongly correlate with wins (even though calculating them is tedious) should bring me below 0.5 log loss.
 
 ## The Final Bracket
 
