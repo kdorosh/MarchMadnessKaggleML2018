@@ -107,3 +107,7 @@ The inherent unreliability of March Madness makes each step of the machine learn
 ## The Final Bracket
 
 ![Final Bracket png](output.png)
+
+The most recent run of the program gave Cincy.. I probably should have done a Monte Carlo simulation because each time the program runs I shuffle X_train and y_train before training my classifier. As a result, the classifier differs slightly after each run. Close games occasionally flip. I have seen outputs of this code where Nova wins it all and UVA wins it all, but not much else typically changes. (occasionally Duke loses to Michigan State in Sweet 16, and Michigan State gets bounced in the Final Four by Nova).
+
+Always room for improvement :)
