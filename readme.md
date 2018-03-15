@@ -45,7 +45,7 @@ Start your larger, more powerful, docker container.
 $ docker-machine start docker2
 ```
 
-Run the Jupyter notebook.
+Run the Jupyter notebook by running `start.sh`.
 
 If you are running Windows, you must run `start.sh` from within the docker quickstart terminal.
 
@@ -53,7 +53,7 @@ If you are running Windows, you must run `start.sh` from within the docker quick
 sh start.sh
 ```
 
-This will open a locally hosted jupyter notebook in your web browser. Open the March Madness notebook, located at `nbs/script.ipynb`. Put the kernel in a "trusted" state and run it.
+This will open a locally hosted jupyter notebook in your web browser. Open the March Madness notebook, located at `nbs/script.ipynb`. Run all cells.
 
 Running the whole script takes a couple minutes on my machine.
 
