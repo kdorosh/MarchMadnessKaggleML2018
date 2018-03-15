@@ -6,7 +6,7 @@ For more detail, check out my [writeup](https://github.com/kdorosh/MarchMadnessK
 
 ## Getting Started
 
-You can run the ipython script in a jupyter notebook locally or you can run it in [my kernel](https://www.kaggle.com/kdorosh/basic-starter-kernel-ncaa-men-s-dataset) on Kaggle's cloud resources.
+You can run the IPython script in a Jupyter notebook locally or you can run it in [my kernel](https://www.kaggle.com/kdorosh/basic-starter-kernel-ncaa-men-s-dataset) on Kaggle's cloud resources.
 
 ### Prerequisites
 
@@ -55,7 +55,7 @@ sh start.sh
 
 This will open a locally hosted jupyter notebook in your web browser. Open the March Madness notebook, located at `nbs/script.ipynb`. Put the kernel in a "trusted" state and run it.
 
-On my machine, running the whole script takes a couple minutes.
+Running the whole script takes a couple minutes on my machine.
 
 Once done, the script will output predictions in `nbs\predictions.csv`.
 
