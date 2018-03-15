@@ -2,7 +2,7 @@
 
 Predicting the NCAA basketball tournament games using Machine Learning for Kaggle's (sponsored by Google Cloud) [contest](https://www.kaggle.com/c/mens-machine-learning-competition-2018).
 
-For more detail, check out my [writeup](https://github.com/kdorosh/MarchMadnessKaggleML2018/blob/master/writeup.md).
+For more detail, check out my [writeup](https://github.com/kdorosh/MarchMadnessKaggleML2018/blob/master/writeup/writeup.md).
 
 ## Getting Started
 
