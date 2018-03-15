@@ -92,6 +92,8 @@ My model makes decisions based solely on the features I provide it! Just some of
 
 For example, I expect my model will undervalue Missouri this year since Michael Porter Jr. (a projected top-5 NBA pick) returns from a back injury for the tournament. All of the predictive metrics my classifier uses rely upon data that would be inflated had he played all season.
 
+Further, I find my model slightly undervalues the seed, given that a 16 seed has never beaten a 1 seed (yet it only predicts ~95% of victory for the 1-seed!).
+
 I would implement more of the above features if I had more time, but even this would only give incremental gains. Luck is still the most important factor; the best data scientists in the world achieve ~70%. March Madness is no exact science. And that's what makes it fun.
 
 ## The Final Bracket
